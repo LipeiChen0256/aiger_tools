@@ -252,9 +252,7 @@ main (int argc, char **argv)
       for (i = 0; i < mgr->num_outputs; i++)
 	{
 	  for (j = 0; j <= count; j++)
-	    putc ('o', file);
-
-	  fprintf (file, "%u := ", i), pl (mgr->outputs[i].lit), ps (";\n");
+	  fprintf (file, "%s := ", mgr->outputs[i].name), pl (mgr->outputs[i].lit), ps (";\n");
 	}
 
       ps ("--bad\n");
